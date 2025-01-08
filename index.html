@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="Fr-fr">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,9 +18,9 @@
 			<div>
 				<span>THEME</span>
 				<div class="tselc">
-					<button>1</button>
-					<button>2</button>
-					<button>3</button>
+					<button class="tselc-1">1</button>
+					<button class="tselc-1">2</button>
+					<button class="tselc-1">3</button>
 				</div>
 			</div>
 		</nav>
@@ -29,27 +29,113 @@
 				<input type="number" name="number" />
 			</section>
 			<section class="calc">
-				<div class="btn">7</div>
-				<div class="btn">8</div>
-				<div class="btn">9</div>
-				<div class="del">DEL</div>
-				<div class="btn">4</div>
-				<div class="btn">5</div>
-				<div class="btn">6</div>
-				<div class="btn">+</div>
-				<div class="btn">1</div>
-				<div class="btn">2</div>
-				<div class="btn">3</div>
-				<div class="btn">-</div>
-				<div class="btn">.</div>
-				<div class="btn">0</div>
-				<div class="btn">/</div>
-				<div class="btn">x</div>
+				<button id="7" class="btn">7</button>
+				<button id="8" class="btn">8</button>
+				<button id="9" class="btn">9</button>
+				<button id="del" class="del">DEL</button>
+				<button id="4" class="btn">4</button>
+				<button id="5" class="btn">5</button>
+				<button id="6" class="btn">6</button>
+				<button id="+" class="btn">+</button>
+				<button id="1" class="btn">1</button>
+				<button id="2" class="btn">2</button>
+				<button id="3" class="btn">3</button>
+				<button id="-" class="btn">-</button>
+				<button id="." class="btn">.</button>
+				<button id="0" class="btn">0</button>
+				<button id="/" class="btn">/</button>
+				<button id="x" class="btn">x</button>
 			</section>
 			<div class="bbox">
-				<div class="res">RESET</div>
-				<div class="egal">=</div>
+				<button id="res" class="res">RESET</button>
+				<button id="=" class="egal">=</button>
 			</div>
 		</main>
+		<script>
+			const button0 = document.getElementById("0");
+			const button1 = document.getElementById("1");
+			const button2 = document.getElementById("2");
+			const button3 = document.getElementById("3");
+			const button4 = document.getElementById("4");
+			const button5 = document.getElementById("5");
+			const button6 = document.getElementById("6");
+			const button7 = document.getElementById("7");
+			const button8 = document.getElementById("8");
+			const button9 = document.getElementById("9");
+			const buttondel = document.getElementById("del");
+			const buttonplus = document.getElementById("+");
+			const buttonmoin = document.getElementById("-");
+			const buttonpoint = document.getElementById(".");
+			const buttondivis = document.getElementById("/");
+			const buttonfois = document.getElementById("x");
+			const buttonegal = document.getElementById("=");
+			const buttonres = document.getElementById("res");
+
+			let somme = 0;
+
+			let isNumberAlreadyClicker = false;
+
+			button0.addEventListener("click", (e) => {
+				somme = somme + 0;
+				isNumberAlreadyClicker = true;
+			});
+			button1.addEventListener("click", (e) => {
+				isNumberAlreadyClicker = true;
+				somme = somme + 1;
+			});
+			button2.addEventListener("click", (e) => {
+				somme = somme + 2;
+				isNumberAlreadyClicker = true;
+			});
+			button3.addEventListener("click", (e) => {
+				somme = somme + 3;
+				isNumberAlreadyClicker = true;
+			});
+			button4.addEventListener("click", (e) => {
+				somme = somme + 4;
+				isNumberAlreadyClicker = true;
+			});
+			button5.addEventListener("click", (e) => {
+				somme = somme + 5;
+				isNumberAlreadyClicker = true;
+			});
+			button6.addEventListener("click", (e) => {
+				somme = somme + 6;
+				isNumberAlreadyClicker = true;
+			});
+			button7.addEventListener("click", (e) => {
+				somme = somme + 7;
+				isNumberAlreadyClicker = true;
+			});
+			button8.addEventListener("click", (e) => {
+				somme = somme + 8;
+				isNumberAlreadyClicker = true;
+			});
+			button9.addEventListener("click", (e) => {
+				somme = somme + 9;
+				isNumberAlreadyClicker = true;
+			});
+			buttonplus.addEventListener("click", (e) => {
+				return somme + somme;
+				isNuberAlreadyCLicker = true;
+				console.log(somme);
+			});
+
+			buttonmoin.addEventListener("click", (e) => {
+				return somme - somme;
+				isNuberAlreadyCLicker = true;
+				console.log(somme);
+			});
+
+			buttonres.addEventListener("click", (e) => {
+				somme = 0;
+				isNumberAlreadyClicker = false;
+				console.clear();
+			});
+
+			buttonegal.addEventListener("click", (e) => {
+				console.log(somme);
+			});
+		</script>
 	</body>
 </html>
